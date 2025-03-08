@@ -1,0 +1,1 @@
+Request: ::1 POST /?first_name=Muhammad%20zohaib&last_name=Abbas&email=zohaib.dev@gmail.com&password=9809090&gender=male
