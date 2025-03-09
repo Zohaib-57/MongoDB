@@ -10,10 +10,10 @@ const UserSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		email: { type: String, required: true, unique: true },
-		password: {
+		email: {
 			type: String,
 			required: true,
+			unique: true,
 		},
 		gender: {
 			type: String,
@@ -24,6 +24,6 @@ const UserSchema = new mongoose.Schema(
 	{ timestamps: true }
 );
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model("users", UserSchema);
 
 module.exports = User;

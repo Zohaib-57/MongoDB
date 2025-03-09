@@ -1,5 +1,6 @@
 const User = require("../models/user");
 
+//create new user
 async function handleGetAllUser(req, res) {
 	try {
 		const users = await User.find();
@@ -9,6 +10,7 @@ async function handleGetAllUser(req, res) {
 	}
 }
 
+//get all the user of the database
 async function handleGetUserById(req, res) {
 	try {
 		const user = await User.findById(req.params.id);
@@ -21,6 +23,7 @@ async function handleGetUserById(req, res) {
 	}
 }
 
+// update the user
 async function handleUpdateUserById(req, res) {
 	try {
 		await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -30,6 +33,7 @@ async function handleUpdateUserById(req, res) {
 	}
 }
 
+//delete the user
 async function handleDeleteUserById(req, res) {
 	try {
 		await User.findByIdAndDelete(req.params.id);
@@ -39,11 +43,12 @@ async function handleDeleteUserById(req, res) {
 	}
 }
 
+//create a new user
 async function handleCreateNewUser(req, res) {
 	try {
 		const { first_name, last_name, email, password, gender } = req.body;
 
-		if (!first_name || !last_name || !email || !password || !gender) {
+		if (!first_name || !last_name || !email || !gender) {
 			return res.status(400).json({ message: "Invalid input" });
 		}
 
@@ -51,7 +56,6 @@ async function handleCreateNewUser(req, res) {
 			first_name,
 			last_name,
 			email,
-			password,
 			gender,
 		});
 

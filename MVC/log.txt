@@ -1,1 +1,6 @@
-Request: ::1 POST /?first_name=Muhammad%20zohaib&last_name=Abbas&email=zohaib.dev@gmail.com&password=9809090&gender=male
+Request: ::1 GET /
+Request: ::1 POST /
+Request: ::1 POST /
+Request: ::1 GET /
+Request: ::1 GET /
+Request: ::1 GET /favicon.ico
